@@ -5,6 +5,7 @@ It assumes flows are incompressible, and to construct 3D full field flow it requ
 2. with 2D velocities input. It assumes 2D velocities are planar projection of 3D flow velocities onto the imaging plane, and conduct inverse with regularization. The author uses GMRES with early-stopping to solve the system.
 
 To use this code, you must cite:
-1) Xinhuan Zhou, Virginie Papadopoulou, Chee Hau Leow, Peter Vincent, Mengxing Tang. 3D Flow Reconstruction Using Divergence Free Interpolation of Multiple 2D Contrast Enhanced Ultrasound Particle Imaging Velocimetry Measurements. Ultrasound in Medicine & Biology
-2) Xinhuan Zhou, Peter Vincent, Xiaowei Zhou, Chee Hau Leow, Mengxing Tang. Optimization of a Fast 3D Divergence Free Flow Reconstruction Using 2D Ultrasound Vector Flow Imaging. Ultrasound in Medicine & Biology
+1) Xinhuan Zhou, Virginie Papadopoulou, Chee Hau Leow, Peter Vincent, Mengxing Tang. 3D Flow Reconstruction Using Divergence Free Interpolation of Multiple 2D Contrast Enhanced Ultrasound Particle Imaging Velocimetry Measurements. Ultrasound in Medicine & Biology 2019
+2) Xinhuan Zhou, Peter Vincent, Xiaowei Zhou, Chee Hau Leow, Mengxing Tang. Optimization of a Fast 3D Divergence Free Flow Reconstruction Using 2D Ultrasound Vector Flow Imaging. Ultrasound in Medicine & Biology 2019
+
 With any queries, contact the author: zhouxinhuan0205@126.com.
