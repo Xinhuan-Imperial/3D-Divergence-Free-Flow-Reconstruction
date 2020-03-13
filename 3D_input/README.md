@@ -1,7 +1,7 @@
-Input: 3D sparse/scattered velocity vectors
+Input: 3D sparse/scattered velocity vectors. The interested 3D flow domain has to be filled by such 3D sparse velocity vectors.
 
 Output: 3D interpolated velocity vectors (can be full field flow in the domain), with the assumption that flow being incompressible.
 
 Software: Matlab
 
-Parameters to tune: shape parameter epsilon, usually set to be average distance between two nearest scattered input velocity vectors
+Parameters to tune: shape parameter epsilon, usually set to be average distance between two nearest scattered input velocity vectors. Small epsilon--> instability to input error; Large epsilon--> low fitting accuracy.
