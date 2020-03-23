@@ -10,6 +10,6 @@ Parameters to tune:
 
 Examples:
 1. Poiseulle_flow_3dinput.m: steady Poiseulle flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions.
-2. Womersley_flow_3dinput.m: unsteady Womersley flow in a staight pipe, diameter 5mm, length 10mm.  Input is from analytical solutions.
+2. Womersley_flow_3dinput.m: unsteady Womersley flow in a staight pipe, diameter 5mm, length 10mm.  Input is from analytical solutions at 50 time steps.
 
 To try with velocity input from real measurements that contain high level of noise, you must tune shape parameter and regularization parameters very carefully for high accuracy.
