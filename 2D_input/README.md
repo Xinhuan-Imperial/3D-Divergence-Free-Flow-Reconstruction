@@ -10,6 +10,6 @@ regularization parameter tol (see the example code), usually set to be the relat
 
 Examples:
 
-Poiseulle_flow_2dinput.m: steady Poiseulle flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions.
-Womersley_flow_2dinput.m: unsteady Womersley flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions at 50 time steps.
+1. Poiseulle_flow_2dinput.m: steady Poiseulle flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions.
+2. Womersley_flow_2dinput.m: unsteady Womersley flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions at 50 time steps.
 To try with velocity input from real measurements that contain high level of noise, you must tune shape parameter and regularization parameters very carefully for high accuracy.
