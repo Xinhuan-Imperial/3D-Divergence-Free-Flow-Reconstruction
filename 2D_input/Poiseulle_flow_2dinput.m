@@ -109,7 +109,8 @@ R(3*m1+3*m2+1:end,3*m1+3*m2+1:end)=kron(eye(m3),eye(3,3));
 
 %% A=R*G is not symmetric, and should use GMRES with proper regularization
 A=R*G;
-lamma=gmres(A,b,[],tol*stopping_constant);
+max_it=3*m3+2*m1+2*m2;
+lamma=gmres(A,b,[],tol*stopping_constant,max_it);
 
 %% Now place any points within the pipe to reconstruct its velocity, you can generate randomly
 p2=[];
