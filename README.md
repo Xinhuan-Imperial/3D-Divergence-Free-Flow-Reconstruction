@@ -1,8 +1,9 @@
 # 3D-Divergence-Free-Flow-Reconstruction
-This folder contains Matlab code of 3D flow divergence free reconstruction using 3D distribution of 3D or 2D velocity vectors input. The input velocity vectors can be acquired from ultrasound Doppler, Ultrasound speckle tracking, MRI Phase Contrast imaging, Particle Imaging Velocimetry, etc.
-It assumes flows are incompressible, and to construct 3D full field flow it requies scattered 3D or 2D velocity components to spatially fill the 3D interested volume:
+This folder contains Matlab code of 3D flow divergence free reconstruction using 3D distribution of 3D, 2D or even 1D velocity vector components input. The input velocity vectors can be acquired from ultrasound Doppler (1D to 4D), Ultrasound speckle tracking (usually 2D to 4D), MRI Phase Contrast imaging (1D to 4D), Particle Imaging Velocimetry (usually 2D to 4D), etc.
+It assumes flows are incompressible, and to construct 3D full field flow it requies scattered 3D, 2D or 1D velocity components to spatially fill the 3D interested volume:
 1. with 3D distribution of 3D velocity component input. It is usually a well-posed problem and is symmemtric, and can be solved by e.g., Conjugate gradient method.
 2. with 3D distribution of 2D velocity component input. It assumes 2D velocities are planar projection of 3D flow velocities onto the imaging plane, and conduct inverse with regularization. The author uses GMRES with early-stopping to solve the system.
+3. with 3D distribution of 1D velocity component input. It assumes 1D velocities are projection of 3D flow velocities onto the imaging beam direction (which is a vector), and conduct inverse with regularization. The author uses GMRES with early-stopping to solve the system.
 
 Hyperparameters to tune for efficiency and accuracy:
 1. Shape parameter
