@@ -43,7 +43,7 @@ G=Gaussian_matrix(D,C,kernel);%for simplicity, D and C coincide
 %% If C and D conincide, G is a symmetric and square matrix and can be solved by Conjugate Gradient method
 % However if C and D do not coincide, G is a rectangular matrix and should
 % be solved by GMRES or other methods
-b=zeros(3*size(C,1),1);
+b=zeros(3*size(D,1),1);
 for i=1:size(vel_in,2)
     b(1:3:end)=zeros(size(points,1),1);
     b(2:3:end)=zeros(size(points,1),1);
