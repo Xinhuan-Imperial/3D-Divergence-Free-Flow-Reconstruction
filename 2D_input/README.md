@@ -1,9 +1,15 @@
-Input: 2D sparse/scattered velocity vectors. The interested 3D flow domain has to be filled by such 2D projected velocity vectors. The best accuracy is achieved with uniform and dense 3D distribution of velocity vectors.
+Input: 3D sparse/scattered distribution of 2D velocity component vectors. The interested 3D flow domain has to be filled by such 2D sparse velocity vectors. The best accuracy is achieved with uniform as well as dense 3D distribution of velocity vectors. Only Matlab code is given.
 
-Output: 3D interpolated velocity vectors (can be full field flow in the domain), with the assumption that: 1. flow being incompressible; 2. 2D velocity vectors are planar projection of 3D velocity vectors onto the imaging plane.
+Output: 3D interpolated velocity vectors (can be full field flow in the domain), with the assumption that flow being incompressible.
 
-Software: Matlab
+Parameters to tune:
 
-Parameters to tune: 
-1. shape parameter epsilon, usually set to be  reciprocal of the average Eucledian distance between two nearest scattered input velocity vectors. Small epsilon--> instability to input error; Large epsilon--> low fitting accuracy. Uniformly distributed velocity vectors in space is preferred, and epsilon can be 1/aver_dist.
-2. stopping criteria, usually slightly larger than the relative error of input 2D velocity vectors. For example, if the input velocities are acquired by Ultrasound speckle tracking, with a relative error of 10% (consider all error sources), the stopping criteria can be set as 1.1*10%, i.e., 0.11. You may need to tune different parameters for a balance between fitting accuracy and error robustness.
+shape parameter kernel.alpha (see the example code), usually set to be reciprocal of the average Eucledian distance between two nearest scattered input velocity vectors. Small epsilon--> instability to input error; Large epsilon--> low fitting accuracy. Uniformly distributed velocity vectors in space is preferred, and epsilon can be 1/aver_dist. However usually an intermediate shape parameter results in highest accuracy.
+
+regularization parameter tol (see the example code), usually set to be the relative error of input velocity vectors, as the input may contain measurement/registration error etc. However usually an intermediate regularization parameter results in highest accuracy.
+
+Examples:
+
+Poiseulle_flow_2dinput.m: steady Poiseulle flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions.
+Womersley_flow_2dinput.m: unsteady Womersley flow in a staight pipe, diameter 5mm, length 10mm. Input is from analytical solutions at 50 time steps.
+To try with velocity input from real measurements that contain high level of noise, you must tune shape parameter and regularization parameters very carefully for high accuracy.
