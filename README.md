@@ -1,11 +1,16 @@
 # 3D-Divergence-Free-Flow-Reconstruction
 This folder contains Matlab code of 3D flow divergence free reconstruction using 3D distribution of 3D or 2D velocity vectors input. The input velocity vectors can be acquired from ultrasound Doppler, Ultrasound speckle tracking, MRI Phase Contrast imaging, Particle Imaging Velocimetry, etc.
-It assumes flows are incompressible, and to construct 3D full field flow it requies 3D or 2D velocites to fill the 3D interested volume:
-1. with 3D velocity input. It is usually a well-posed problem and is symmemtric, and can be solved by e.g., Conjugate gradient method.
-2. with 2D velocities input. It assumes 2D velocities are planar projection of 3D flow velocities onto the imaging plane, and conduct inverse with regularization. The author uses GMRES with early-stopping to solve the system.
+It assumes flows are incompressible, and to construct 3D full field flow it requies scattered 3D or 2D velocity components to spatially fill the 3D interested volume:
+1. with 3D distribution of 3D velocity component input. It is usually a well-posed problem and is symmemtric, and can be solved by e.g., Conjugate gradient method.
+2. with 3D distribution of 2D velocity component input. It assumes 2D velocities are planar projection of 3D flow velocities onto the imaging plane, and conduct inverse with regularization. The author uses GMRES with early-stopping to solve the system.
+
+Hyperparameters to tune for efficiency and accuracy:
+1. Shape parameter
+2. Regularization parameter, i.e., the early stopping convergence criteria
 
 To use this code, you must cite:
-1) Xinhuan Zhou, Virginie Papadopoulou, Chee Hau Leow, Peter Vincent, Mengxing Tang. 3D Flow Reconstruction Using Divergence Free Interpolation of Multiple 2D Contrast Enhanced Ultrasound Particle Imaging Velocimetry Measurements. Ultrasound in Medicine & Biology 2019
-2) Xinhuan Zhou, Peter Vincent, Xiaowei Zhou, Chee Hau Leow, Mengxing Tang. Optimization of a Fast 3D Divergence Free Flow Reconstruction Using 2D Ultrasound Vector Flow Imaging. Ultrasound in Medicine & Biology 2019
+1) Zhou X, Papadopoulou V, Leow CH, Vincent P, Tang M-Xet al., 2019, 3-D flow reconstruction using divergence-free interpolation of multiple 2-D contrast-enhanced ultrasound particle imaging velocimetry measurements, Ultrasound in Medicine and Biology, Vol: 45, Pages: 795-810, ISSN: 0301-5629
+2) Zhou X, Vincent P, Zhou X, Leow CH, Tang M-Xet al., 2019, Optimization of 3-D Divergence-Free Flow Field Reconstruction Using 2-D Ultrasound Vector Flow Imaging, Ultrasound in Medicine and Biology, Vol: 45, Pages: 3042-3055, ISSN: 0301-5629
+3) Zhou X, Zhou X, Leow CH, Vincent P, Tang Met al., 2018, 3D Flow Reconstruction and Wall Shear Stress Evaluation with 2D Ultrafast Ultrasound Particle Imaging Velocimetry, IEEE International Ultrasonics Symposium (IUS), Publisher: IEEE, ISSN: 1948-5719
 
 With any queries, contact the author: zhouxinhuan0205@126.com.
