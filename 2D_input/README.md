@@ -1,4 +1,4 @@
-Input: 3D sparse/scattered distribution of 2D velocity component vectors. The interested 3D flow domain has to be filled by such 2D sparse velocity vectors. The best accuracy is achieved with uniform as well as dense 3D distribution of velocity vectors. Only Matlab code is given.
+Input: 3D sparse/scattered distribution of 2D velocity component vectors (e.g., Ultrasound speckle tracking, particle imaging velocimetry). The interested 3D flow domain has to be filled by such 2D sparse velocity vectors. The best accuracy is achieved with uniform as well as dense 3D distribution of velocity vectors. Only Matlab code is given.
 
 Output: 3D interpolated velocity vectors (can be full field flow in the domain), with the assumption that flow being incompressible.
 
