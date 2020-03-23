@@ -1,5 +1,5 @@
 %% by Dr. Xinhuan Zhou from Imperial College London, zhouxinhuan0205@126.com
-% This code is for reconstruction of steady Poiseulle flow in a ciruclar pipe
+% This code is for 3D reconstruction of steady Poiseulle flow in a ciruclar pipe, using 3D velocity input
 clear;close all;clc;
 
 %% parameters of the straight pipe and input velocity vector distribution
